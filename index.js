@@ -22,6 +22,7 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }));
 app.use(errorHandler);
 // app.use(colors);
 app.use('/api/goals', require('./routes/goalRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
